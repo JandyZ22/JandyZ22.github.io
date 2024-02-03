@@ -9,7 +9,7 @@
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
 <meta property="og:description" content="使用BQmail申请地震数据后，要对地震数据进行去仪器响应。现在的数据格式为miniseed。 去仪器响应代码 # 代码如下： import obspy from obspy import read, read_inventory import glob import os # 搜索mseed列表 mseedlst = glob.glob(os.path.join(&#34;*.mseed&#34;)) # 循环去响应 for file in mseedlst: st = read(&#39;TEPE.YL.mseed&#39;) # 分割字符串为列表 strlst = file.split(&#34;.&#34;) # inventory 详尽目录 # 一般为." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.org/posts/xmlresp/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://JandyZ22.github.io/posts/xmlresp/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-06-07T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-06-07T00:00:00+00:00" />
 
