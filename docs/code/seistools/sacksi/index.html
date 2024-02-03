@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="sacksi # 获取PKIKP 射线与地球旋转轴之间的角度 \(\xi\) 上图是PKIKP 射线路径在内核中的几何形状。地球的旋转轴用一条指向南北方向的虚线表示。PKIKP 射线与地球旋转轴之间的角度被定义为射线角（ξ）。 假设PKIKP 波震源位置为 \(S(\theta_1,\phi_1)\) , 台站的位置为 \(R(\theta_2,\phi_2)\) 。 其中">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="sacksi # 获取PKIKP 射线与地球旋转轴之间的角度 \(\xi\) 上图是PKIKP 射线路径在内核中的几何形状。地球的旋转轴用一条指向南北方向的虚线表示。PKIKP 射线与地球旋转轴之间的角度被定义为射线角（ξ）。 假设PKIKP 波震源位置为 \(S(\theta_1,\phi_1)\) , 台站的位置为 \(R(\theta_2,\phi_2)\) 。 其中" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.org/docs/code/seistools/sacksi/" /><meta property="article:section" content="docs" />
+
+
+
+<title>Sacksi | Jandy&#39;s Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.f6163edcc180217ef14fe11c16e832e003e2dc167eb8788ef1e2ebabbc778c7b.js" integrity="sha256-9hY&#43;3MGAIX7xT&#43;EcFugy4APi3BZ&#43;uHiO8eLrq7x3jHs=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Jandy&#39;s Blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">地震学</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Code</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-7c851ced44038f72532f497812de450a" class="toggle" checked />
+    <label for="section-7c851ced44038f72532f497812de450a" class="flex justify-between">
+      <a href="/docs/code/seistools/" class="">Seistools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/code/seistools/sacksi/" class="active">Sacksi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/code/seistools/sacsnr/" class="">Sacsnr</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        博客
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/JandyZ22"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Sacksi</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#sacksi">sacksi</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="sacksi">
+  sacksi
+  <a class="anchor" href="#sacksi">#</a>
+</h1>
+<p>获取PKIKP 射线与地球旋转轴之间的角度
+<link rel="stylesheet" href="/katex/katex.min.css" />
+<script defer src="/katex/katex.min.js"></script>
+<script defer src="/katex/auto-render.min.js" onload="renderMathInElement(document.body);"></script><span>
+  \(\xi\)
+</span>
+</p>
+<div align="center">
+<img src="/img/sacksi1.png" alt="sacksi" width="400" height="400">
+</div>
+<p>上图是PKIKP 射线路径在内核中的几何形状。地球的旋转轴用一条指向南北方向的虚线表示。PKIKP 射线与地球旋转轴之间的角度被定义为射线角（ξ）。</p>
+<p>假设PKIKP 波震源位置为<span>
+  \(S(\theta_1,\phi_1)\)
+</span>
+, 台站的位置为<span>
+  \(R(\theta_2,\phi_2)\)
+</span>
+。
+其中<span>
+  \(\theta_1\)
+</span>
+为震源的余纬度(90º - 纬度), <span>
+  \(\phi_2\)
+</span>
+为震源的经度, <span>
+  \(\theta_2\)
+</span>
+ 和<span>
+  \(\phi_2\)
+</span>
+ 分别是台站的余纬度和经度。</p>
+<p>计算公式如下：</p>
+<span>
+  \[
+
+
+\cos\xi = \frac{\left| \cos\theta_1 - \cos\theta_2 \right|}{\sqrt{2 - 2\cos\theta_1\cos\theta_2 - 2\sin\theta_1\sin\theta_2\cos(\phi_1 - \phi_2)}}\]
+</span>
+
+<p>在上述公式中，ξ 定义在0 - 90°区间内。对于赤道平面的射线路径，ξ= 90º，而穿过地球的射线路径与地球自旋轴平行，ξ= 0º。当ξ &lt; <strong>35º</strong> 时，相应的PKIKP 射线路径一般被称为<strong>南北向</strong>或<strong>南北向路径</strong>；反之则被称为<strong>东西向</strong>或<strong>东西向路径</strong>。</p>
+<h2 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h2>
+<pre><code>(jandy) [ydz@gaia YL]$ sacksi
+successfully send 2005.06.01_2005.07.01
+(jandy) [ydz@gaia YL]$ 
+</code></pre>
+
+
+
+
+  
+
+<a  href="/"   class="book-btn">
+  Get Home
+</a>
+
+<div style="float:right">
+  
+
+
+  
+  
+
+
+<a  href="https://github.com/JandyZ22/sacksi"   target="_blank" rel="noopener"  class="book-btn">
+  github code
+</a>
+
+</div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#sacksi">sacksi</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

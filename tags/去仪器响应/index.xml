@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>去仪器响应 on Jandy&#39;s Blog</title>
+    <link>https://example.org/tags/%E5%8E%BB%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94/</link>
+    <description>Recent content in 去仪器响应 on Jandy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/%E5%8E%BB%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/posts/xmlresp/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/xmlresp/</guid>
+      <description>使用BQmail申请地震数据后，要对地震数据进行去仪器响应。现在的数据格式为miniseed。 去仪器响应代码 # 代码如下： import obspy from obspy import read, read_inventory import glob import os # 搜索mseed列表 mseedlst = glob.glob(os.path.join(&amp;#34;*.mseed&amp;#34;)) # 循环去响应 for file in mseedlst: st = read(&amp;#39;TEPE.YL.mseed&amp;#39;) # 分割字符串为列表 strlst = file.split(&amp;#34;.&amp;#34;) # inventory 详尽目录 # 一般为.</description>
+    </item>
+  </channel>
+</rss>

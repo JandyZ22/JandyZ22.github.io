@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件使用 on Jandy&#39;s Blog</title>
+    <link>https://example.org/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
+    <description>Recent content in 软件使用 on Jandy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://example.org/posts/bqmail/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/bqmail/</guid>
+      <description>简介 # bqmail 是南大徐弥坚博士写的一个向IRIS申请数据的Python模块，实现了地震和台站的快速查询，并能够以Python模块的方式调用来发送数据请求，使用起来十分方便。 徐博士在他的博客里已经详细说明了安装及使用用法，这里我只对发送申请数据进行</description>
+    </item>
+  </channel>
+</rss>
