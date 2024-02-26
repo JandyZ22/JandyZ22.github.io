@@ -52,24 +52,26 @@
     </item>
     <item>
       <title></title>
-      <link>https://JandyZ22.github.io/docs/code/seistools/sacksi/</link>
+      <link>https://JandyZ22.github.io/docs/code/seis-tools/sacksi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/docs/code/seistools/sacksi/</guid>
+      <guid>https://JandyZ22.github.io/docs/code/seis-tools/sacksi/</guid>
       <description>sacksi # 获取PKIKP 射线与地球旋转轴之间的角度 \(\xi\) 上图是PKIKP 射线路径在内核中的几何形状。地球的旋转轴用一条指向南北方向的虚线表示。PKIKP 射线与地球旋转轴之间的角度被定义为射线角（ξ）。 假设PKIKP 波震源位置为 \(S(\theta_1,\phi_1)\) , 台站的位置为 \(R(\theta_2,\phi_2)\) 。 其中</description>
     </item>
     <item>
       <title></title>
-      <link>https://JandyZ22.github.io/docs/code/seistools/sacsnr/</link>
+      <link>https://JandyZ22.github.io/docs/code/seis-tools/sacsnr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/docs/code/seistools/sacsnr/</guid>
-      <description>sacsnr # 获取指定时间窗口内SAC文件的信噪比。 公式如下： \[ S N R=10 \log _{10}\left(\frac{A_s}{A_N}\right)^2 \] Example # (jandy) [ydz@gaia YL]$ sacsnr successfully send 2005.06.01_2005.07.01 (jandy) [ydz@gaia YL]$ Get Home github code</description>
+      <guid>https://JandyZ22.github.io/docs/code/seis-tools/sacsnr/</guid>
+      <description>sacsnr # 获取指定时间窗口内SAC文件的信噪比。 公式如下： \[ S N R=10 \log _{10}\left(\frac{A_s}{A_N}\right)^2 \] Example # (jandy) [ydz@gaia Test]$ sacsnr -T7/0/50/-50/0 SSE.BHN.2007.297.210257.SAC SSE.BHN.2007.297.210257.SAC 1.214 (jandy) [ydz@gaia Test]$ Get Home github code</description>
     </item>
     <item>
       <title></title>
       <link>https://JandyZ22.github.io/docs/example/hidden/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://JandyZ22.github.io/docs/example/hidden/</guid>
-      <description>This page is hidden in menu&#xD;#&#xD;Quondam non pater est dignior ille Eurotas&#xD;#&#xD;Latent te facies&#xD;#&#xD;Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.&#xA;Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor Cum honorum Latona&#xD;#&#xD;O fallor in sustinui iussorum equidem. Nymphae operi oris alii fronde parens dumque, in auro ait mox ingenti proxima iamdudum maius?&#xA;reality(burnDocking(apache_nanometer),&#xD;pad.property_data_programming.sectorBrowserPpga(dataMask, 37,&#xD;recycleRup));&#xD;intellectualVaporwareUser += -5 * 4;&#xD;traceroute_key_upnp /= lag_optical(android.smb(thyristorTftp));&#xD;surge_host_golden = mca_compact_device(dual_dpi_opengl, 33,&#xD;commerce_add_ppc);&#xD;if (lun_ipv) {&#xD;verticalExtranet(1, thumbnail_ttl, 3);&#xD;bar_graphics_jpeg(chipset - sector_xmp_beta);&#xD;}&#xD;Fronde cetera dextrae sequens pennis voce muneris&#xD;#&#xD;Acta cretus diem restet utque; move integer, oscula non inspirat, noctisque scelus!</description>
+      <description>This page is hidden in menu#Quondam non pater est dignior ille Eurotas#Latent te facies#Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
+Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor Cum honorum Latona#O fallor in sustinui iussorum equidem. Nymphae operi oris alii fronde parens dumque, in auro ait mox ingenti proxima iamdudum maius?
+reality(burnDocking(apache_nanometer),pad.property_data_programming.sectorBrowserPpga(dataMask, 37,recycleRup));intellectualVaporwareUser += -5 * 4;traceroute_key_upnp /= lag_optical(android.smb(thyristorTftp));surge_host_golden = mca_compact_device(dual_dpi_opengl, 33,commerce_add_ppc);if (lun_ipv) {verticalExtranet(1, thumbnail_ttl, 3);bar_graphics_jpeg(chipset - sector_xmp_beta);}Fronde cetera dextrae sequens pennis voce muneris#Acta cretus diem restet utque; move integer, oscula non inspirat, noctisque scelus!</description>
     </item>
   </channel>
 </rss>
