@@ -1,77 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>关于 on Jandy&#39;s Blog</title>
-    <link>https://JandyZ22.github.io/</link>
-    <description>Recent content in 关于 on Jandy&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://JandyZ22.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/posts/bqmail/</link>
-      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/posts/bqmail/</guid>
-      <description>简介 # bqmail 是南大徐弥坚博士写的一个向IRIS申请数据的Python模块，实现了地震和台站的快速查询，并能够以Python模块的方式调用来发送数据请求，使用起来十分方便。 徐博士在他的博客里已经详细说明了安装及使用用法，这里我只对发送申请数据进行</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/posts/xmlresp/</link>
-      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/posts/xmlresp/</guid>
-      <description>使用BQmail申请地震数据后，要对地震数据进行去仪器响应。现在的数据格式为miniseed。 去仪器响应代码 # 代码如下： import obspy from obspy import read, read_inventory import glob import os # 搜索mseed列表 mseedlst = glob.glob(os.path.join(&amp;#34;*.mseed&amp;#34;)) # 循环去响应 for file in mseedlst: st = read(&amp;#39;TEPE.YL.mseed&amp;#39;) # 分割字符串为列表 strlst = file.split(&amp;#34;.&amp;#34;) # inventory 详尽目录 # 一般为.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/posts/jianzirumian/</link>
-      <pubDate>Thu, 31 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/posts/jianzirumian/</guid>
-      <description>Bye Bye # 窗外田野飞速退后，不时又穿梭在黑暗之中，车窗上只现灯光的重影。 殊不知已是多少次购买站票了，一小时前十分钟到达东站发现匆忙之中竟忘带身份证，不得已只好改签。和我一同在过道上还有一个年轻小伙，不过一上车便从背包里抽出一张折叠板凳坐在旁边，</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/posts/loutiyuzoulu/</link>
-      <pubDate>Sun, 14 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/posts/loutiyuzoulu/</guid>
-      <description>很多事情总是莫名其妙的讨厌，以为都是自己框住自己的狗屁原则作祟，后面发现有的原来是有原因的。比方说以前老是对李宗盛大师抱有偏见，原来只是和另外一名带师名字搞混了。然而臭豆腐和田鸡是真没吃过，相比于电梯我也更喜欢楼梯。 最常去的是图书馆，进门仰</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/posts/luzhouji/</link>
-      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/posts/luzhouji/</guid>
-      <description>一天 # 闹钟响起，猛地一下坐起。破沙发弹簧坏了一半，醒来像是左背被击中了几拳。迷迷糊糊醒过几次，还是害怕睡过头，虽说师兄一定会叫醒我的。到合肥后天气就没凉快过，薄薄的云总架不住炎炎烈日的烤。五点多天边的橙光便已透过鱼鳞斑。在熟悉的路边摊买两个</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/posts/guokedehua/</link>
-      <pubDate>Wed, 06 Jul 2016 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/posts/guokedehua/</guid>
-      <description>若非打开手机QQ，或许还真会忘记今天是我生日。确实，这只是我平凡日子中无聊的一天。曾想过无数种十八岁生日的过法，却唯独没有想过这种平淡的差点忘记的&amp;hellip;&amp;hellip;很开心的是今天早上吃了一碗超大份的油茶，好久不见的味道哈哈。嗯</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/docs/code/seis-tools/sacksi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/docs/code/seis-tools/sacksi/</guid>
-      <description>sacksi # 获取PKIKP 射线与地球旋转轴之间的角度 \(\xi\) 上图是PKIKP 射线路径在内核中的几何形状。地球的旋转轴用一条指向南北方向的虚线表示。PKIKP 射线与地球旋转轴之间的角度被定义为射线角（ξ）。 假设PKIKP 波震源位置为 \(S(\theta_1,\phi_1)\) , 台站的位置为 \(R(\theta_2,\phi_2)\) 。 其中</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/docs/code/seis-tools/sacsnr/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/docs/code/seis-tools/sacsnr/</guid>
-      <description>sacsnr # 获取指定时间窗口内SAC文件的信噪比。 公式如下： \[ S N R=10 \log _{10}\left(\frac{A_s}{A_N}\right)^2 \] Example # (jandy) [ydz@gaia Test]$ sacsnr -T7/0/50/-50/0 SSE.BHN.2007.297.210257.SAC SSE.BHN.2007.297.210257.SAC 1.214 (jandy) [ydz@gaia Test]$ Get Home github code</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JandyZ22.github.io/docs/example/hidden/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JandyZ22.github.io/docs/example/hidden/</guid>
-      <description>This page is hidden in menu#Quondam non pater est dignior ille Eurotas#Latent te facies#Lorem markdownum arma ignoscas vocavit quoque ille texit mandata mentis ultimus, frementes, qui in vel. Hippotades Peleus pennas conscia cuiquam Caeneus quas.
-Pater demittere evincitque reddunt Maxime adhuc pressit huc Danaas quid freta Soror ego Luctus linguam saxa ultroque prior Tatiumque inquit Saepe liquitur subita superata dederat Anius sudor Cum honorum Latona#O fallor in sustinui iussorum equidem. Nymphae operi oris alii fronde parens dumque, in auro ait mox ingenti proxima iamdudum maius?
-reality(burnDocking(apache_nanometer),pad.property_data_programming.sectorBrowserPpga(dataMask, 37,recycleRup));intellectualVaporwareUser += -5 * 4;traceroute_key_upnp /= lag_optical(android.smb(thyristorTftp));surge_host_golden = mca_compact_device(dual_dpi_opengl, 33,commerce_add_ppc);if (lun_ipv) {verticalExtranet(1, thumbnail_ttl, 3);bar_graphics_jpeg(chipset - sector_xmp_beta);}Fronde cetera dextrae sequens pennis voce muneris#Acta cretus diem restet utque; move integer, oscula non inspirat, noctisque scelus!</description>
-    </item>
-  </channel>
-</rss>
