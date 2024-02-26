@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="使用BQmail申请地震数据后，要对地震数据进行去仪器响应。现在的数据格式为miniseed。 去仪器响应代码 # 代码如下： import obspy from obspy import read, read_inventory import glob import os # 搜索mseed列表 mseedlst = glob.glob(os.path.join(&#34;*.mseed&#34;)) # 循环去响应 for file in mseedlst: st = read(&#39;TEPE.YL.mseed&#39;) # 分割字符串为列表 strlst = file.split(&#34;.&#34;) # inventory 详尽目录 # 一般为.">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
+<meta property="og:description" content="使用BQmail申请地震数据后，要对地震数据进行去仪器响应。现在的数据格式为miniseed。 去仪器响应代码 # 代码如下： import obspy from obspy import read, read_inventory import glob import os # 搜索mseed列表 mseedlst = glob.glob(os.path.join(&#34;*.mseed&#34;)) # 循环去响应 for file in mseedlst: st = read(&#39;TEPE.YL.mseed&#39;) # 分割字符串为列表 strlst = file.split(&#34;.&#34;) # inventory 详尽目录 # 一般为." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://JandyZ22.github.io/posts/xmlresp/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-06-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-06-07T00:00:00+00:00" />
+
+<title>使用.xml文件去仪器响应 | Jandy&#39;s Blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+<link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.5102a1458ffd024e5743d07c8af1e04fa2ccf1d1606455732db01307c858923c.js" integrity="sha256-UQKhRY/9Ak5XQ9B8ivHgT6LM8dFgZFVzLbATB8hYkjw=" crossorigin="anonymous"></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Jandy&#39;s Blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <a href="/docs/example/" class="">地震学</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li class="book-section-flat" >
+          
+  
+  
+
+  
+    <span>Code</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-2011c792b4ae6d81a6a335301b3eba1e" class="toggle"  />
+    <label for="section-2011c792b4ae6d81a6a335301b3eba1e" class="flex justify-between">
+      <a href="/docs/code/seis-tools/" class="">Seis Tools</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/code/seis-tools/sacksi/" class="">Sacksi</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/code/seis-tools/sacsnr/" class="">Sacsnr</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="/posts/"  >
+        博客
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/JandyZ22"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+  <li>
+    <a href="https://themes.gohugo.io/hugo-book/"  target="_blank" rel="noopener">
+        Hugo Themes
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>使用.xml文件去仪器响应</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#去仪器响应代码">去仪器响应代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+<article class="markdown book-post">
+  <h1>
+    <a href="/posts/xmlresp/">使用.xml文件去仪器响应</a>
+  </h1>
+  
+  <h5>June 7, 2022</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/categories/%E5%9C%B0%E9%9C%87%E5%AD%A6/">地震学</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/tags/python/">python</a>, 
+      <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">数据处理</a>, 
+      <a href="/tags/%E5%8E%BB%E4%BB%AA%E5%99%A8%E5%93%8D%E5%BA%94/">去仪器响应</a>
+  </div>
+  
+
+
+
+<hr>
+<p>使用BQmail申请地震数据后，要对地震数据进行去仪器响应。现在的数据格式为miniseed。</p>
+<h2 id="去仪器响应代码">
+  去仪器响应代码
+  <a class="anchor" href="#%e5%8e%bb%e4%bb%aa%e5%99%a8%e5%93%8d%e5%ba%94%e4%bb%a3%e7%a0%81">#</a>
+</h2>
+<p>代码如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-tpl" data-lang="tpl"><span style="display:flex;"><span>import obspy
+</span></span><span style="display:flex;"><span>from obspy import read, read_inventory
+</span></span><span style="display:flex;"><span>import glob
+</span></span><span style="display:flex;"><span>import os
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 搜索mseed列表
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mseedlst = glob.glob(os.path.join(&#34;*.mseed&#34;))
+</span></span><span style="display:flex;"><span># 循环去响应
+</span></span><span style="display:flex;"><span>for file in mseedlst:
+</span></span><span style="display:flex;"><span>    st = read(&#39;TEPE.YL.mseed&#39;)
+</span></span><span style="display:flex;"><span>    # 分割字符串为列表
+</span></span><span style="display:flex;"><span>    strlst = file.split(&#34;.&#34;)
+</span></span><span style="display:flex;"><span>    # inventory  详尽目录
+</span></span><span style="display:flex;"><span>    # 一般为.xml格式 自动匹配
+</span></span><span style="display:flex;"><span>    inv = read_inventory(&#39;IRISDMC-&#39; + strlst[0] + &#39;.YL.xml&#39;)
+</span></span><span style="display:flex;"><span>    # 滤波预处理 防止反褶积产生的噪声
+</span></span><span style="display:flex;"><span>    pre_filt = (0.005, 0.006, 15, 19)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    # output
+</span></span><span style="display:flex;"><span>    #        :param output: Output units. One of:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    #            ``&#34;DISP&#34;``
+</span></span><span style="display:flex;"><span>    #                displacement, output unit is meters
+</span></span><span style="display:flex;"><span>    #            ``&#34;VEL&#34;``
+</span></span><span style="display:flex;"><span>    #               velocity, output unit is meters/second
+</span></span><span style="display:flex;"><span>    #            ``&#34;ACC&#34;``
+</span></span><span style="display:flex;"><span>    #               acceleration, output unit is meters/second**2
+</span></span><span style="display:flex;"><span>    #
+</span></span><span style="display:flex;"><span>    st.remove_response(inventory=inv, output=&#34;VEL&#34;, pre_filt=pre_filt)
+</span></span><span style="display:flex;"><span>    # 写入新文件中
+</span></span><span style="display:flex;"><span>    st.write(&#39;norespmseed&#39; + &#39;\\&#39; + strlst[0] + &#39;.YL.mseed&#39;) 
+</span></span></code></pre></div>
+
+
+
+  
+
+<a  href="/posts/"   class="book-btn">
+  返回
+</a>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#去仪器响应代码">去仪器响应代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
