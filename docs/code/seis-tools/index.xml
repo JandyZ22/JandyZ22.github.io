@@ -16,6 +16,13 @@
     </item>
     <item>
       <title></title>
+      <link>https://JandyZ22.github.io/docs/code/seis-tools/sacmax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://JandyZ22.github.io/docs/code/seis-tools/sacmax/</guid>
+      <description>sacmax # 在指定的时间窗口内查找SAC文件中的极值振幅时间。 sacmax [-Ttmark/t1/t2] [-M0|1|2] -o tmark2 sacfiles* -Ttmark/t1/t2 指定头段tmark为参考的时间窗口 -M0 寻找最大绝对振幅(默认) -M1 寻找最大正值振幅(+) -M2 寻找最大正值振幅(-) -o tmark2 指定头段tmark(t0~t9)来存储结果 Example # (jandy) [ydz@gaia Test]$ sacmax -T9/-4/8 -M2 -o</description>
+    </item>
+    <item>
+      <title></title>
       <link>https://JandyZ22.github.io/docs/code/seis-tools/sacsnr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://JandyZ22.github.io/docs/code/seis-tools/sacsnr/</guid>

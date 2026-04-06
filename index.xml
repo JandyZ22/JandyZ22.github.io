@@ -38,6 +38,20 @@
     </item>
     <item>
       <title></title>
+      <link>https://JandyZ22.github.io/posts/wuti/</link>
+      <pubDate>Sun, 13 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://JandyZ22.github.io/posts/wuti/</guid>
+      <description>火车经过 鸣笛声悠扬 低俗小说 上厕所要记得带枪 奋力跳就能摸到的篮球框 火焰包上的曙光 矿山上的月亮与山下的美丽村庄 灰尘飞扬的水泥厂 围墙旁边唱围墙 野外打产状手真的很僵 地震老师划重点划男秒变分奴的模样 电法上山时荆棘密布 断层上的核桃树林 元旦老人带来卷子和</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://JandyZ22.github.io/posts/gengduodifang/</link>
+      <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
+      <guid>https://JandyZ22.github.io/posts/gengduodifang/</guid>
+      <description>记忆比文字更深远 每次遇到什么事情，好像睡一觉便过去了。不经意间突然浮现在脑海，这就是记忆。 常常写字记录自己无趣生活中有趣的事。翻看着以前的话，以前的照片，才发现原来以前我是这样子的啊。就如走在路上想起一个笑话突然就开始傻笑，看着曾经的照片想</description>
+    </item>
+    <item>
+      <title></title>
       <link>https://JandyZ22.github.io/posts/luzhouji/</link>
       <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
       <guid>https://JandyZ22.github.io/posts/luzhouji/</guid>
@@ -56,6 +70,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://JandyZ22.github.io/docs/code/seis-tools/sacksi/</guid>
       <description>sacksi # 获取PKIKP 射线与地球旋转轴之间的角度 \(\xi\) 上图是PKIKP 射线路径在内核中的几何形状。地球的旋转轴用一条指向南北方向的虚线表示。PKIKP 射线与地球旋转轴之间的角度被定义为射线角（ξ）。 假设PKIKP 波震源位置为 \(S(\theta_1,\phi_1)\) , 台站的位置为 \(R(\theta_2,\phi_2)\) 。 其中</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://JandyZ22.github.io/docs/code/seis-tools/sacmax/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://JandyZ22.github.io/docs/code/seis-tools/sacmax/</guid>
+      <description>sacmax # 在指定的时间窗口内查找SAC文件中的极值振幅时间。 sacmax [-Ttmark/t1/t2] [-M0|1|2] -o tmark2 sacfiles* -Ttmark/t1/t2 指定头段tmark为参考的时间窗口 -M0 寻找最大绝对振幅(默认) -M1 寻找最大正值振幅(+) -M2 寻找最大正值振幅(-) -o tmark2 指定头段tmark(t0~t9)来存储结果 Example # (jandy) [ydz@gaia Test]$ sacmax -T9/-4/8 -M2 -o</description>
     </item>
     <item>
       <title></title>

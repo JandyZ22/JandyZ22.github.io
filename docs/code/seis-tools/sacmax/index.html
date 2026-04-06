@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SeisTools # 一些命令行工具 sacsnr: 计算地震数据信噪比 sacksi: 计算PKIKP射线与地球旋转轴之间的角度 sacmax: 在指定的时间窗口内查找SAC文件中的极值振幅时间。">
+<meta name="description" content="sacmax # 在指定的时间窗口内查找SAC文件中的极值振幅时间。 sacmax [-Ttmark/t1/t2] [-M0|1|2] -o tmark2 sacfiles* -Ttmark/t1/t2 指定头段tmark为参考的时间窗口 -M0 寻找最大绝对振幅(默认) -M1 寻找最大正值振幅(&#43;) -M2 寻找最大正值振幅(-) -o tmark2 指定头段tmark(t0~t9)来存储结果 Example # (jandy) [ydz@gaia Test]$ sacmax -T9/-4/8 -M2 -o">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://JandyZ22.github.io/docs/code/seis-tools/" />
+<meta property="og:description" content="sacmax # 在指定的时间窗口内查找SAC文件中的极值振幅时间。 sacmax [-Ttmark/t1/t2] [-M0|1|2] -o tmark2 sacfiles* -Ttmark/t1/t2 指定头段tmark为参考的时间窗口 -M0 寻找最大绝对振幅(默认) -M1 寻找最大正值振幅(&#43;) -M2 寻找最大正值振幅(-) -o tmark2 指定头段tmark(t0~t9)来存储结果 Example # (jandy) [ydz@gaia Test]$ sacmax -T9/-4/8 -M2 -o" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://JandyZ22.github.io/docs/code/seis-tools/sacmax/" /><meta property="article:section" content="docs" />
 
-<title>Seis Tools | Jandy&#39;s Blog</title>
+
+
+<title>Sacmax | Jandy&#39;s Blog</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
   <script defer src="/en.search.min.3acd456d37df4bc6a35bb12bd8a8ed716dfd0760d25f2c996ec30445f1d57c0c.js" integrity="sha256-Os1FbTffS8ajW7Er2KjtcW39B2DSXyyZbsMERfHVfAw=" crossorigin="anonymous"></script>
-<link rel="alternate" type="application/rss+xml" href="https://JandyZ22.github.io/docs/code/seis-tools/index.xml" title="Jandy's Blog" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -102,7 +103,7 @@ https://github.com/alex-shpak/hugo-book
   
     <input type="checkbox" id="section-2011c792b4ae6d81a6a335301b3eba1e" class="toggle" checked />
     <label for="section-2011c792b4ae6d81a6a335301b3eba1e" class="flex justify-between">
-      <a href="/docs/code/seis-tools/" class="active">Seis Tools</a>
+      <a href="/docs/code/seis-tools/" class="">Seis Tools</a>
     </label>
   
 
@@ -129,7 +130,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="/docs/code/seis-tools/sacmax/" class="">Sacmax</a>
+    <a href="/docs/code/seis-tools/sacmax/" class="active">Sacmax</a>
   
 
         </li>
@@ -218,7 +219,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Seis Tools</strong>
+  <strong>Sacmax</strong>
 
   <label for="toc-control">
     
@@ -234,7 +235,11 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#seistools">SeisTools</a></li>
+    <li><a href="#sacmax">sacmax</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -247,22 +252,52 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown book-article"><h1 id="seistools">
-  SeisTools
-  <a class="anchor" href="#seistools">#</a>
+  <article class="markdown book-article"><h1 id="sacmax">
+  sacmax
+  <a class="anchor" href="#sacmax">#</a>
 </h1>
-<p>一些命令行工具</p>
+<p>在指定的时间窗口内查找SAC文件中的极值振幅时间。</p>
 <ul>
 <li>
-<p><a href="sacsnr"><strong>sacsnr</strong></a>: 计算地震数据信噪比</p>
-</li>
-<li>
-<p><a href="sacksi"><strong>sacksi</strong></a>: 计算PKIKP射线与地球旋转轴之间的角度</p>
-</li>
-<li>
-<p><a href="sacksi"><strong>sacmax</strong></a>: 在指定的时间窗口内查找SAC文件中的极值振幅时间。</p>
+<p>sacmax [-Ttmark/t1/t2] [-M0|1|2] -o tmark2 sacfiles*</p>
+<p>-Ttmark/t1/t2   指定头段tmark为参考的时间窗口</p>
+<p>-M0             寻找最大绝对振幅(默认)</p>
+<p>-M1             寻找最大正值振幅(+)</p>
+<p>-M2             寻找最大正值振幅(-)</p>
+<p>-o tmark2       指定头段tmark(t0~t9)来存储结果</p>
 </li>
 </ul>
+<h2 id="example">
+  Example
+  <a class="anchor" href="#example">#</a>
+</h2>
+<pre><code>(jandy) [ydz@gaia Test]$ sacmax -T9/-4/8 -M2 -o 2 TA.121A.2010.151.19.51.45.BHZ.sac  
+Max amplitude (mode 2) 1143.98 written to t2 of TA.121A.2010.151.19.51.45.BHZ.sac
+(jandy) [ydz@gaia Test]$  
+</code></pre>
+
+
+
+
+  
+
+<a  href="/"   class="book-btn">
+  Get Home
+</a>
+
+<div style="float:right">
+  
+
+
+  
+  
+
+
+<a  href="https://github.com/JandyZ22/sacsnr"   target="_blank" rel="noopener"  class="book-btn">
+  github code
+</a>
+
+</div>
 </article>
  
       
@@ -304,7 +339,11 @@ https://github.com/alex-shpak/hugo-book
   
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#seistools">SeisTools</a></li>
+    <li><a href="#sacmax">sacmax</a>
+      <ul>
+        <li><a href="#example">Example</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
