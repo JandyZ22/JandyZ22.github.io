@@ -16,7 +16,7 @@
 <link rel="icon" href="/favicon.png" >
 <link rel="stylesheet" href="/book.min.33a48f5432973b8ff9a82679d9e45d67f2c15d4399bd2829269455cfe390b5e8.css" integrity="sha256-M6SPVDKXO4/5qCZ52eRdZ/LBXUOZvSgpJpRVz&#43;OQteg=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.3acd456d37df4bc6a35bb12bd8a8ed716dfd0760d25f2c996ec30445f1d57c0c.js" integrity="sha256-Os1FbTffS8ajW7Er2KjtcW39B2DSXyyZbsMERfHVfAw=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.b723773b570165e259f51bdd9071a89694b9aa1c1873fe0e5108ae123b679637.js" integrity="sha256-tyN3O1cBZeJZ9RvdkHGolpS5qhwYc/4OUQiuEjtnljc=" crossorigin="anonymous"></script>
 <link rel="alternate" type="application/rss+xml" href="https://jandyz22.github.io/tags/python/index.xml" title="Jandy's Blog" />
 <!--
 Made with Book Theme
@@ -366,7 +366,7 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-    <p>使用BQmail申请地震数据后，要对地震数据进行去仪器响应。现在的数据格式为miniseed。 去仪器响应代码 # 代码如下： import obspy from obspy import read, read_inventory import glob import os # 搜索mseed列表 mseedlst = glob.glob(os.path.join(&#34;*.mseed&#34;)) # 循环去响应 for file in mseedlst: st = read(&#39;TEPE.YL.mseed&#39;) # 分割字符串为列表 strlst = file.split(&#34;.&#34;) # inventory 详尽目录 # 一般为.
+    <p>使用BQmail申请地震数据后，要对地震数据进行去仪器响应。现在的数据格式为miniseed。 去仪器响应代码 # 代码如下： import obspy from obspy import read, read_inventory import glob import os # 搜索mseed列表 mseedlst = glob.glob(os.path.join(&#34;*.mseed&#34;)) # 循环去响应 for file in mseedlst: st = read(file) # 分割字符串为列表 strlst = file.split(&#34;.&#34;) # inventory 详尽目录 # 一般为.
         <a href="/posts/xmlresp/">...</a>
       
     </p>
